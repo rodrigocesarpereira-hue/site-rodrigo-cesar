@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rodrigo César | Psicólogo Clínico em Garanhuns</title>
+
+    <meta name="description" content="Psicólogo clínico em Garanhuns-PE. Atendimento psicológico presencial e online, com abordagem baseada na Terapia Cognitivo-Comportamental.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #25282A;
+            background: #F7F6F2;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* CABEÇALHO */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(247, 246, 242, 0.96);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(22, 74, 91, 0.08);
+        }
+
+        .nav {
+            height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: #164A5B;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 11px;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-top: -2px;
+            color: #287C8C;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 14px;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #164A5B;
+        }
+
+        .nav-button {
+            background: #164A5B;
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 30px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 82px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 70px;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            color: #287C8C;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(46px, 6vw, 76px);
+            line-height: 1.02;
+            font-weight: normal;
+            color: #164A5B;
+            margin-bottom: 28px;
+        }
+
+        .hero-text {
+            font-size: 19px;
+            max-width: 540px;
+            color: #555;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: #164A5B;
+            color: white;
+        }
+
+        .button-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            border: 1px solid #164A5B;
+            color: #164A5B;
+        }
+
+        .hero-image {
+            min-height: 560px;
+            border-radius: 180px 180px 30px 30px;
+            background: #ECE9E1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero-image p {
+            max-width: 220px;
+            font-size: 14px;
+        }
+
+        /* SEÇÕES */
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-light {
+            background: white;
+        }
+
+        .section-header {
+            max-width: 680px;
+            margin-bottom: 55px;
+        }
+
+        .section-header h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(36px, 5vw, 54px);
+            font-weight: normal;
+            line-height: 1.1;
+            color: #164A5B;
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 17px;
+        }
+
+        /* DORES */
+
+        .questions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .question {
+            padding: 32px;
+            background: #F7F6F2;
+            border-radius: 18px;
+        }
+
+        .question h3 {
+            color: #164A5B;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .question p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* SOBRE */
+
+        .about {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 520px;
+            background: #ECE9E1;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .about-text h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            line-height: 1.1;
+            font-weight: normal;
+            color: #164A5B;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: #555;
+            margin-bottom: 18px;
+            font-size: 17px;
+        }
+
+        /* TCC */
+
+        .tcc-box {
+            background: #164A5B;
+            color: white;
+            border-radius: 30px;
+            padding: 70px;
+        }
+
+        .tcc-box h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            font-weight: normal;
+            margin-bottom: 22px;
+        }
+
+        .tcc-box p {
+            max-width: 760px;
+            font-size: 17px;
+            opacity: 0.9;
+        }
+
+        /* PROCESSO */
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .step {
+            padding: 25px;
+            border-top: 2px solid #287C8C;
+        }
+
+        .step-number {
+            font-size: 13px;
+            color: #287C8C;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .step h3 {
+            color: #164A5B;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* ATENDIMENTO */
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .service {
+            padding: 40px;
+            background: #F7F6F2;
+            border-radius: 25px;
+        }
+
+        .service h3 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            color: #164A5B;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #666;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            background: #ECE9E1;
+        }
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: normal;
+            color: #164A5B;
+            max-width: 750px;
+            margin: 0 auto 25px;
+            line-height: 1.1;
+        }
+
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #666;
+        }
+
+        /* RODAPÉ */
+
+        footer {
+            background: #164A5B;
+            color: white;
+            padding: 55px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 20px;
+            font-size: 12px;
+            opacity: 0.65;
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 800px) {
+
+            nav a:not(.nav-button) {
+                display: none;
+            }
+
+            .hero-content,
+            .about {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .hero-image {
+                min-height: 420px;
+                order: -1;
+            }
+
+            .questions,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .tcc-box {
+                padding: 40px 25px;
+            }
+
+            .tcc-box h2,
+            .about-text h2 {
+                font-size: 38px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container nav">
+        <a href="#" class="logo">
+            RODRIGO CÉSAR
+            <span>PSICOLOGIA CLÍNICA</span>
+        </a>
+
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#abordagem">Abordagem</a>
+            <a href="#atendimento">Atendimento</a>
+            <a href="#contato" class="nav-button">Vamos conversar</a>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="container hero-content">
+
+            <div>
+                <div class="eyebrow">Psicólogo Clínico · Garanhuns e Online</div>
+
+                <h1>
+                    Cuidar da mente também é aprender a se escutar.
+                </h1>
+
+                <p class="hero-text">
+                    Um espaço de escuta, reflexão e construção de novas possibilidades para compreender o que você vive e transformar a forma como lida com aquilo que sente.
+                </p>
+
+                <div class="buttons">
+                    <a href="#contato" class="button button-primary">
+                        Quero conversar
+                    </a>
+
+                    <a href="#sobre" class="button button-secondary">
+                        Conhecer meu trabalho
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <p>
+                    Aqui entraremos com uma fotografia profissional do Rodrigo.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- QUESTÕES -->
+
+    <section class="section-light">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="eyebrow">Talvez você tenha chegado até aqui por isso</div>
+
+                <h2>
+                    Nem sempre é fácil entender o que está acontecendo com a gente.
+                </h2>
+
+                <p>
+                    Às vezes, aquilo que parece apenas uma fase começa a interferir na rotina, nos relacionamentos e na maneira como você se enxerga.
+                </p>
+            </div>
+
+            <div class="questions">
+
+                <div class="question">
+                    <h3>Você sente que está sobrecarregado?</h3>
+                    <p>
+                        Pensamentos acelerados, dificuldade para desacelerar e a sensação de estar sempre tentando dar conta de tudo.
+                    </p>
+                </div>
+
+                <div class="question">
+                    <h3>Algumas situações continuam se repetindo?</h3>
+                    <p>
+                        Padrões de comportamento e pensamentos que você reconhece, mas parece não conseguir modificar sozinho.
+                    </p>
+                </div>
+
+                <div class="question">
+                    <h3>Você gostaria de se compreender melhor?</h3>
+                    <p>
+                        Entender emoções, pensamentos e comportamentos pode ser um caminho importante para construir mudanças mais conscientes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre">
+        <div class="container about">
+
+            <div class="about-image">
+                <p>
+                    Aqui entraremos com uma fotografia profissional do consultório ou do Rodrigo.
+                </p>
+            </div>
+
+            <div class="about-text">
+
+                <div class="eyebrow">Sobre meu trabalho</div>
+
+                <h2>
+                    Psicologia com escuta, direção e propósito.
+                </h2>
+
+                <p>
+                    Sou Rodrigo César, psicólogo clínico, e acredito que a psicoterapia precisa ser um espaço seguro para compreender o que acontece, mas também um espaço de construção.
+                </p>
+
+                <p>
+                    Meu trabalho busca unir acolhimento e direcionamento, respeitando a singularidade de cada pessoa e o momento que ela está vivendo.
+                </p>
+
+                <p>
+                    A partir da Terapia Cognitivo-Comportamental, trabalhamos pensamentos, emoções e comportamentos de maneira prática e colaborativa.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ABORDAGEM -->
+
+    <section id="abordagem" class="section-light">
+        <div class="container">
+
+            <div class="tcc-box">
+
+                <div class="eyebrow">Minha abordagem</div>
+
+                <h2>
+                    Terapia Cognitivo-Comportamental
+                </h2>
+
+                <p>
+                    A TCC parte da compreensão de que pensamentos, emoções e comportamentos estão relacionados. Na psicoterapia, investigamos esses padrões e desenvolvemos estratégias para lidar de maneira mais funcional com as situações da vida.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROCESSO -->
+
+    <section>
+        <div class="container">
+
+            <div class="section-header">
+                <div class="eyebrow">Como funciona</div>
+
+                <h2>
+                    Um processo construído junto com você.
+                </h2>
+
+                <p>
+                    A psicoterapia não é uma fórmula pronta. O caminho é construído a partir da sua história, das suas necessidades e dos objetivos que fazemos sentido trabalhar.
+                </p>
+            </div>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Compreender</h3>
+                    <p>Conhecer sua história e entender o que trouxe você até aqui.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Identificar</h3>
+                    <p>Perceber padrões de pensamentos, emoções e comportamentos.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Refletir</h3>
+                    <p>Questionar interpretações e formas de lidar com as situações.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Experimentar</h3>
+                    <p>Desenvolver estratégias e colocar novas possibilidades em prática.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">05</div>
+                    <h3>Transformar</h3>
+                    <p>Construir mudanças que possam fazer sentido para sua vida.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ATENDIMENTO -->
+
+    <section id="atendimento" class="section-light">
+        <div class="container">
+
+            <div class="section-header">
+                <div class="eyebrow">Atendimento psicológico</div>
+
+                <h2>
+                    Um espaço para você, onde estiver.
+                </h2>
+            </div>
+
+            <div class="services">
+
+                <div class="service">
+                    <h3>Presencial</h3>
+                    <p>
+                        Atendimento psicológico no consultório em Garanhuns, em um ambiente reservado e preparado para proporcionar acolhimento e privacidade.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <h3>Online</h3>
+                    <p>
+                        Sessões por videochamada, permitindo que você tenha acompanhamento psicológico de onde estiver, com segurança e privacidade.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+
+    <section id="contato" class="cta">
+
+        <div class="container">
+
+            <h2>
+                Talvez o primeiro passo seja simplesmente conversar.
+            </h2>
+
+            <p>
+                Se você sente que chegou o momento de olhar com mais atenção para aquilo que está vivendo, entre em contato.
+            </p>
+
+            <a href="#" class="button button-primary">
+                Agendar uma conversa
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>Rodrigo César</h3>
+                <p>Psicólogo Clínico</p>
+            </div>
+
+            <div>
+                <p>Garanhuns · Pernambuco</p>
+                <p>Atendimento presencial e online</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 Rodrigo César · Psicologia Clínica
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
