@@ -414,6 +414,55 @@
             margin: 0 auto 30px;
             color: #666;
         }
+        /* FAQ */
+
+.faq {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.faq details {
+    border-top: 1px solid #D9D6CE;
+    padding: 24px 0;
+}
+
+.faq details:last-child {
+    border-bottom: 1px solid #D9D6CE;
+}
+
+.faq summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 19px;
+    font-weight: 700;
+    color: #164A5B;
+    padding-right: 40px;
+    position: relative;
+}
+
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq summary::after {
+    content: "+";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 26px;
+    font-weight: normal;
+    color: #287C8C;
+}
+
+.faq details[open] summary::after {
+    content: "−";
+}
+
+.faq details p {
+    max-width: 760px;
+    margin-top: 15px;
+    color: #666;
+}
 
         /* RODAPÉ */
 
