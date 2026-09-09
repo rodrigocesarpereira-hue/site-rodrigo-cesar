@@ -57,26 +57,37 @@
             justify-content: space-between;
         }
 
-        .logo {
+                .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #164A5B;
+        }
+
+        .logo img {
+            height: 68px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+        }
+
+        .logo-name {
             font-size: 20px;
             font-weight: bold;
             letter-spacing: 1px;
             color: #164A5B;
-            display: flex;
-align-items: center;
-gap: 14px;
         }
-.logo img {
-    height: 100px;
-    width: auto;
-    display: block;
-}
-        .logo span {
-            display: block;
+
+        .logo-specialty {
             font-size: 11px;
             font-weight: normal;
             letter-spacing: 2px;
-            margin-top: -2px;
+            margin-top: 4px;
             color: #287C8C;
         }
 
@@ -591,18 +602,22 @@ gap: 14px;
             nav a:not(.nav-button) {
                 display: none;
             }
-            .logo {
-                font-size: 20px;
-                gap: 10px;
+                        .logo {
+                gap: 8px;
             }
 
             .logo img {
-                height: 70px;
+                height: 58px;
             }
 
-            .logo span {
-                font-size: 11px;
-                letter-spacing: 1.5px;
+            .logo-name {
+                font-size: 17px;
+                letter-spacing: 0.8px;
+            }
+
+            .logo-specialty {
+                font-size: 9px;
+                letter-spacing: 1.4px;
             }
             .hero-content,
             .about {
@@ -668,13 +683,12 @@ gap: 14px;
 <header>
     <div class="container nav">
         <a href="#" class="logo">
-            <img src="logo.png" alt="Logo Rodrigo César">
-            <div>
-                RODRIGO CÉSAR
-                <span>PSICOLOGIA CLÍNICA</span>
-            </div>
-        </a>
-
+    <img src="logo.png" alt="Logo Rodrigo César">
+    <div class="logo-text">
+        <div class="logo-name">RODRIGO CÉSAR</div>
+        <div class="logo-specialty">PSICOLOGIA CLÍNICA</div>
+    </div>
+</a>
         <nav>
             <a href="#sobre">Sobre</a>
             <a href="#abordagem">Abordagem</a>
