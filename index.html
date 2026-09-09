@@ -308,6 +308,22 @@
             opacity: 0.9;
         }
 
+        .tcc-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.tcc-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 22px;
+    display: block;
+}
+
         /* PROCESSO */
 
         .steps {
@@ -451,6 +467,14 @@
 
             .tcc-box {
                 padding: 40px 25px;
+            }
+                        .tcc-content {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .tcc-image img {
+                max-height: 300px;
             }
 
             .tcc-box h2,
@@ -655,17 +679,25 @@
 
             <div class="tcc-box">
 
-                <div class="eyebrow">Minha abordagem</div>
+    <div class="tcc-content">
 
-                <h2>
-                    Terapia Cognitivo-Comportamental
-                </h2>
+        <div class="tcc-text">
+            <div class="eyebrow">Minha abordagem</div>
 
-                <p>
-                    A Terapia Cognitivo-Comportamental parte da compreensão de que nossos pensamentos, emoções e comportamentos estão relacionados e podem influenciar a maneira como lidamos com diferentes situações. Na psicoterapia, buscamos compreender esses padrões, observar como eles aparecem na sua vida e identificar o que pode estar mantendo determinadas dificuldades. A partir dessa compreensão, trabalhamos na construção de formas mais funcionais de pensar, sentir e agir diante daquilo que você está vivendo.
-                </p>
+            <h2>Terapia Cognitivo-Comportamental</h2>
 
-            </div>
+            <p>
+                A Terapia Cognitivo-Comportamental parte da compreensão de que nossos pensamentos, emoções e comportamentos estão relacionados e podem influenciar a maneira como lidamos com diferentes situações. Na psicoterapia, buscamos compreender esses padrões, observar como eles aparecem na sua vida e identificar o que pode estar mantendo determinadas dificuldades. A partir dessa compreensão, trabalhamos na construção de formas mais funcionais de pensar, sentir e agir diante daquilo que você está vivendo.
+            </p>
+        </div>
+
+        <div class="tcc-image">
+            <img src="tcc.jpeg" alt="Imagem relacionada à Terapia Cognitivo-Comportamental">
+        </div>
+
+    </div>
+
+</div>
 
         </div>
     </section>
