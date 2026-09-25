@@ -437,26 +437,6 @@
 /* REFLEXÕES */
 
 .reflections {
-    .reflexoes-intro {
-    display: grid;
-    grid-template-columns: 1fr 0.8fr;
-    gap: 50px;
-    align-items: center;
-    margin-bottom: 55px;
-}
-
-.reflexoes-image {
-    height: 320px;
-    border-radius: 25px;
-    overflow: hidden;
-}
-
-.reflexoes-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -503,7 +483,13 @@
     color: #287C8C;
     border-color: #287C8C;
 }
-        /* DEPOIMENTOS */
+
+.reflection-details summary {
+    font-weight: bold;
+}
+
+
+/* DEPOIMENTOS */
 
 .testimonials {
     display: grid;
@@ -523,33 +509,33 @@
     font-size: 17px;
     line-height: 1.7;
 }
-        .reflection-details summary {
-    font-weight: bold;
+
+
+/* CTA */
+
+.cta {
+    text-align: center;
+    background: #ECE9E1;
 }
 
-        /* CTA */
+.cta h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: normal;
+    color: #164A5B;
+    max-width: 750px;
+    margin: 0 auto 25px;
+    line-height: 1.1;
+}
 
-        .cta {
-            text-align: center;
-            background: #ECE9E1;
-        }
+.cta p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: #666;
+}
 
-        .cta h2 {
-            font-family: Georgia, serif;
-            font-size: clamp(38px, 5vw, 58px);
-            font-weight: normal;
-            color: #164A5B;
-            max-width: 750px;
-            margin: 0 auto 25px;
-            line-height: 1.1;
-        }
 
-        .cta p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            color: #666;
-        }
-        /* FAQ */
+/* FAQ */
 
 .faq {
     max-width: 850px;
@@ -599,42 +585,44 @@
     color: #666;
 }
 
-        /* RODAPÉ */
 
-        footer {
-            background: #164A5B;
-            color: white;
-            padding: 55px 0 30px;
-        }
+/* RODAPÉ */
 
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+footer {
+    background: #164A5B;
+    color: white;
+    padding: 55px 0 30px;
+}
 
-        footer h3 {
-            font-family: Georgia, serif;
-            font-size: 25px;
-            font-weight: normal;
-        }
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
 
-        footer p {
-            opacity: 0.8;
-            font-size: 14px;
-            margin-top: 8px;
-        }
+footer h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: normal;
+}
 
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.15);
-            padding-top: 20px;
-            font-size: 12px;
-            opacity: 0.65;
-            text-align: center;
-        }
+footer p {
+    opacity: 0.8;
+    font-size: 14px;
+    margin-top: 8px;
+}
 
-         /* CELULAR */
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 20px;
+    font-size: 12px;
+    opacity: 0.65;
+    text-align: center;
+}
+
+
+/* CELULAR */
 
         @media (max-width: 800px) {
 
