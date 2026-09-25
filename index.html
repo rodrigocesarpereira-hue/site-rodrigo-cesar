@@ -218,7 +218,22 @@
         .section-light {
             background: white;
         }
+.social-reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
 
+.social-reviews > section {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .social-reviews {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
         .section-header {
             max-width: 680px;
             margin-bottom: 55px;
