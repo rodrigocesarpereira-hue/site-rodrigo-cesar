@@ -437,6 +437,26 @@
 /* REFLEXÕES */
 
 .reflections {
+    .reflexoes-intro {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.reflexoes-image {
+    height: 320px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.reflexoes-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
@@ -1158,7 +1178,7 @@
 
 <section id="reflexoes" class="section-light">
     <div class="container">
-
+<div class="reflexoes-intro">
         <div class="section-header">
             <div class="eyebrow">Reflexões</div>
 
@@ -1169,6 +1189,9 @@
             <p>
                 Reflexões sobre Psicologia e sobre situações que fazem parte da vida cotidiana.
             </p>
+            <div class="reflexoes-image">
+    <img src="reflexoes.jpeg" alt="Imagem relacionada às reflexões sobre Psicologia">
+</div>
         </div>
 
         <div class="reflections">
